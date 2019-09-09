@@ -1,6 +1,16 @@
-const getRomanNumeral = require('../../src/helpers/getRomanNumeral')
-
 const assert = require('chai').assert
+
+const initGetRomanNumeral = require('../../src/helpers/getRomanNumeral')
+
+const constants = {
+  hundreds: ['', 'C', 'CC', 'CCC', 'CD', 'D', 'DC', 'DCC', 'DCCC', 'CM'],
+  invalidMessage: 'Input must be between 1 and 3999',
+  ones: ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'],
+  tens: ['', 'X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC'],
+  thousands: ['', 'M', 'MM', 'MMM']
+}
+
+const getRomanNumeral = initGetRomanNumeral(constants)
 
 describe('getRomanNumeral.js', () => {
   it(`getRomanNumeral should return 'Input must be between 1 and 3999' when passed 0`, () => {
