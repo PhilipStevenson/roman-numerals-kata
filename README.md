@@ -1,4 +1,4 @@
-# roman-numerals-kata 🇮🇹
+# Roman Numerals Kata 🇮🇹
 
 ## Overview 📖
 This program takes an Arabic number (integer) as an input, and returns said number's Roman numeral equivalent.
