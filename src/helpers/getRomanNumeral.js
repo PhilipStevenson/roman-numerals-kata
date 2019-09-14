@@ -2,7 +2,8 @@ module.exports = (
   constants,
   getReversedString
 ) => arabicNumber => {
-  if (arabicNumber >= constants.minimumRomanNumeral && arabicNumber <= constants.maximumRomanNumeral) {
+  if (arabicNumber >= constants.minimumRomanNumeral &&
+    arabicNumber <= constants.maximumRomanNumeral) {
     const arabicNumberAsString = getReversedString(arabicNumber.toString())
 
     const romanNumerals = [
@@ -18,7 +19,10 @@ module.exports = (
       index
     ) => romanNumerals[index][currentValue] + accumulator
 
-    return [...arabicNumberAsString].reduce(reducer, constants.emptyString)
+    return [...arabicNumberAsString].reduce(
+      reducer,
+      constants.emptyString
+    )
   } else {
     return constants.invalidMessage
   }
