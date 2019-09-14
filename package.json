@@ -25,5 +25,8 @@
     "env": [
       "mocha"
     ]
+  },
+  "dependencies": {
+    "sinon": "^7.4.2"
   }
 }
